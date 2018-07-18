@@ -55,27 +55,22 @@ function products(res){
         }
     )
     .then(function(answer1) {
-        userItemID = "";
-        userProdName = "";
-        userDeptName = "";
-        userPrice = 0;
-        userStockQty = 0;
+        selectedItemID = "";
+        selectedProdName = "";
+        selectedDeptName = "";
+        selectedPrice = 0;
+        selectedStockQty = 0;
 
         var itemFound = false;
         for (var i = 0; i < res.length; i++) {
             if (answer1.purchaseID == res[i].item_id) {
                 itemFound = true;
-                userItemID = res[i].item_id;
-                userProdName = res[i].product_name;
-                userDeptName = res[i].department_name;
-                userPrice = res[i].price;
-                userStockQty = res[i].stock_quantity;
-                // console.log("userItemID=" + userItemID);
-                // console.log("userProdName=" + userProdName);
-                // console.log("userDeptName=" + userDeptName);
-                // console.log("userPrice=" + userPrice);
-                // console.log("userStockQty=" + userStockQty);
-            }
+                selectedItemID = res[i].item_id;
+                selectedProdName = res[i].product_name;
+                selectedDeptName = res[i].department_name;
+                selectedPrice = res[i].price;
+                selectedStockQty = res[i].stock_quantity;
+             }
         }
         if (!itemFound) {
             console.log("\n INVALID ENTRY:".yellow + " Please enter the ID number of a product.".cyan)
@@ -109,38 +104,34 @@ function quantity(res){
             console.log("\nINVALID ENTRY!".yellow)
             quantity(res);
         }
-        else if (userStockQty == 0) {
+        else if (selectedStockQty == 0) {
             console.log("\nSORRY, THAT ITEM IS CURRENTLY OUT OF STOCK!".red);
             products(res);
         }
-        else if (answer2.purchaseQty > userStockQty) {
-            console.log("\nSORRY, INSUFFICIENT QUANTITY!".red + " Please enter a lower amount:".cyan);
+        else if (answer2.purchaseQty > selectedStockQty) {
+            console.log("\nSORRY, INSUFFICIENT QUANTITY! ".red + selectedStockQty + " in stock. Please enter a lower amount:");
             quantity(res);
         }
         else {
-            var userPurchaseQty = answer2.purchaseQty;
-            // console.log("userItemID=" + userItemID);
-            // console.log("userProdName=" + userProdName);
-            // console.log("userDeptName=" + userDeptName);
-            // console.log("userPrice=" + userPrice);
-            // console.log("userStockQty=" + userStockQty);
-            makePurchase(userStockQty, userPurchaseQty);
+            var selectedPurchaseQty = answer2.purchaseQty;
+            makePurchase(selectedStockQty, selectedPurchaseQty);
         };
     });
   };
 
 
-  function makePurchase(userStockQty, userPurchaseQty) {
-    var query = "UPDATE products SET stock_quantity = (stock_quantity - " + userPurchaseQty + ") WHERE item_id = " + userItemID + ";";
+  function makePurchase(selectedStockQty, selectedPurchaseQty) {
+    var query = "UPDATE products SET stock_quantity = (stock_quantity - " + selectedPurchaseQty + ") WHERE item_id = " + selectedItemID + ";";
     connection.query(query, function(err, res) {
         if (err) throw err;
         console.log("\nCongratulations!".yellow)
-        if (userPurchaseQty == 1) {
-            console.log("You purchased 1 '" + userProdName + "'. " + (userStockQty - userPurchaseQty) + " remaining in stock.");
+        if (selectedPurchaseQty == 1) {
+            console.log("You purchased 1 '" + selectedProdName + "'. " + (selectedStockQty - selectedPurchaseQty) + " remaining in stock.");
         }
         else {
-            console.log("You purchased " + userPurchaseQty + " of '" + userProdName + "'. " + (userStockQty - userPurchaseQty) + " remaining in stock.");
+            console.log("You purchased " + selectedPurchaseQty + " of '" + selectedProdName + "'. " + (selectedStockQty - selectedPurchaseQty) + " remaining in stock.");
         }
+        console.log(("Your total cost is $" + selectedPurchaseQty + selectedPrice).yellow)
         connection.end();
     });
 

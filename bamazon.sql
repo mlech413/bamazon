@@ -26,10 +26,10 @@ INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Roku Streaming Stick", "Electronics", 69.99, 5);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Bounce Dryer Sheets", "Laundry", 12.49, 50);
+VALUES ("Bounce Dryer Sheets", "Laundry", 12.49, 5);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Tide Laundry Detergent", "Laundry", 9.99, 500);
+VALUES ("Tide Laundry Detergent", "Laundry", 9.99, 50);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Crest Toothpaste", "Personal Care", 3.49, 100);
