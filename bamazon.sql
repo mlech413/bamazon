@@ -42,5 +42,3 @@ VALUES ("Jurassic World Stegosaurus Figure", "Toys", 17.97, 1);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Jurassic World T-Rex Figure", "Toys", 32.82, 3);
-
-SELECT * FROM products ORDER BY department_name, product_name;

@@ -3,12 +3,9 @@ var inquirer = require("inquirer");
 var colors = require("colors");
 var Table = require("cli-table");
 
-var item = [];
-var productList = [];
-
 var table = new Table({
   head: ['ID', 'Product Name', 'Department', 'Price']
-, colWidths: [4, 40, 20, 8]
+, colWidths: [4, 50, 20, 8]
 });
 
 var connection = mysql.createConnection({
@@ -23,15 +20,16 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) throw err;
   start();
-  connection.end();
+  
 });
 
 function start() {
     var query = "SELECT * FROM products ORDER BY department_name, product_name;";
     connection.query(query, function(err, res) {
-        productList = [];
         for (var i = 0; i < res.length; i++){
-            table.push([res[i].item_id, res[i].product_name, res[i].department_name, "$" + res[i].price]);
+            if (res[i].stock_quantity > 0){
+                table.push([res[i].item_id, res[i].product_name, res[i].department_name, "$" + res[i].price]);
+            }
         };
         products(res);
 
@@ -62,7 +60,6 @@ function products(res){
         userDeptName = "";
         userPrice = 0;
         userStockQty = 0;
-        console.log("answer.purchaseID=" + answer1.purchaseID);
 
         var itemFound = false;
         for (var i = 0; i < res.length; i++) {
@@ -73,11 +70,11 @@ function products(res){
                 userDeptName = res[i].department_name;
                 userPrice = res[i].price;
                 userStockQty = res[i].stock_quantity;
-                console.log("userItemID=" + userItemID);
-                console.log("userProdName=" + userProdName);
-                console.log("userDeptName=" + userDeptName);
-                console.log("userPrice=" + userPrice);
-                console.log("userStockQty=" + userStockQty);
+                // console.log("userItemID=" + userItemID);
+                // console.log("userProdName=" + userProdName);
+                // console.log("userDeptName=" + userDeptName);
+                // console.log("userPrice=" + userPrice);
+                // console.log("userStockQty=" + userStockQty);
             }
         }
         if (!itemFound) {
@@ -105,20 +102,46 @@ function quantity(res){
         }
     )
     .then(function(answer2) {
-        if (answer2.purchaseQty < 1 || answer2.purchaseQty < '1' || answer2.purchaseQty > 999 || answer2.purchaseQty > '999') {
+        if (answer2.purchaseQty == 0) {
+            products(res);
+        }
+        else if (answer2.purchaseQty < 1 || answer2.purchaseQty < '1' || answer2.purchaseQty > 999 || answer2.purchaseQty > '999') {
             console.log("\nINVALID ENTRY!".yellow)
             quantity(res);
         }
-        else if (answer2.purchaseQty > userStockQty) {
-            console.log("\n\nINSUFFICIENT QUANTITY!".red + " Please try another order:\n".cyan);
+        else if (userStockQty == 0) {
+            console.log("\nSORRY, THAT ITEM IS CURRENTLY OUT OF STOCK!".red);
             products(res);
         }
+        else if (answer2.purchaseQty > userStockQty) {
+            console.log("\nSORRY, INSUFFICIENT QUANTITY!".red + " Please enter a lower amount:".cyan);
+            quantity(res);
+        }
         else {
-            console.log("userItemID=" + userItemID);
-            console.log("userProdName=" + userProdName);
-            console.log("userDeptName=" + userDeptName);
-            console.log("userPrice=" + userPrice);
-            console.log("userStockQty=" + userStockQty);
+            var userPurchaseQty = answer2.purchaseQty;
+            // console.log("userItemID=" + userItemID);
+            // console.log("userProdName=" + userProdName);
+            // console.log("userDeptName=" + userDeptName);
+            // console.log("userPrice=" + userPrice);
+            // console.log("userStockQty=" + userStockQty);
+            makePurchase(userStockQty, userPurchaseQty);
         };
     });
   };
+
+
+  function makePurchase(userStockQty, userPurchaseQty) {
+    var query = "UPDATE products SET stock_quantity = (stock_quantity - " + userPurchaseQty + ") WHERE item_id = " + userItemID + ";";
+    connection.query(query, function(err, res) {
+        if (err) throw err;
+        console.log("\nCongratulations!".yellow)
+        if (userPurchaseQty == 1) {
+            console.log("You purchased 1 '" + userProdName + "'. " + (userStockQty - userPurchaseQty) + " remaining in stock.");
+        }
+        else {
+            console.log("You purchased " + userPurchaseQty + " of '" + userProdName + "'. " + (userStockQty - userPurchaseQty) + " remaining in stock.");
+        }
+        connection.end();
+    });
+
+};
