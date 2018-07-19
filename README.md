@@ -25,7 +25,7 @@
 #### Items that are out of stock will no longer appear in the initial product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are *NOT* displayed when the application is run again:
 ![Img4.jpg](/images/Img4.jpg)
 
-#### The application will only accept numbers of actual products. It will not accept
+#### The application will only accept numbers of actual products. It will *NOT* accept:
 * any numbers that are not a displayed item ID,
 * pressing Enter with no value, and
 * all non-numeric characters.
