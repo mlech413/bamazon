@@ -12,34 +12,34 @@
 
 #### After entering the console command 'node bamazonCustomer.js', the user is shown a list of available items, and asked to pick the ID of an item to purchase. In this example, there are 10 items available. The user is entering item '5' for Bounce Dryer Sheets:
 
-![GitHub Logo](/images/Img1.jpg)
-[https://github.com/mlech413/bamazon/blob/master/images/1.jpg]
+(/images/img1.jpg)
+[https://github.com/mlech413/bamazon/blob/master/images/img1.jpg]
 
 
 #### The user is them prompted a second time, to enter the quantity of that item that they which to purchase. Here the user is entering a quantity of 5:
-![GitHub Logo](/images/Img2.jpg)
-[https://github.com/mlech413/bamazon/blob/master/images/2.jpg]
+(/images/img2.jpg)
+[https://github.com/mlech413/bamazon/blob/master/images/img2.jpg]
 
 #### The purchase has been made, as item 5 (Bounce Dryer Sheets) has been purchased. The user is informed of how many they purchased (5), as well as the remaining count still in stock. In this case, there were only 5 available originally and all 5 were purchased, so there are now 0 items remaining. The total cost of $62.45 is displayed ($12.49 price * 5 quantity):
-![GitHub Logo](/images/Img3.jpg)
-[https://github.com/mlech413/bamazon/blob/master/images/3.jpg]
+(/images/img3.jpg)
+[https://github.com/mlech413/bamazon/blob/master/images/img3.jpg]
 
 #### Items that are out of stock will no longer appear in the inital product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are not be displayed when the application is run again:
-![GitHub Logo](/images/Img4.jpg)
-[https://github.com/mlech413/bamazon/blob/master/images/4.jpg]
+(/images/img4.jpg)
+[https://github.com/mlech413/bamazon/blob/master/images/img4.jpg]
 
 #### The application will only accept numbers of actual products. It will reject:
 * any numbers outside of the item ID range,
 * pressing Enter with no value, and
 * all non-numeric characters.
-#### In all of these cases, a message is displayed and the product list is displayed again:
-(/images/Img5.jpg)
-[https://github.com/mlech413/bamazon/blob/master/images/5.jpg]
+#### In all of these scenarios, a message is displayed and the product list is displayed again:
+(/images/img5.jpg)
+[https://github.com/mlech413/bamazon/blob/master/imagesimg/5.jpg]
 
 #### 
-!(/images/Img6.jpg)
-[https://github.com/mlech413/bamazon/blob/master/images/6.jpg]
+(/images/img6.jpg)
+[https://github.com/mlech413/bamazon/blob/master/images/img6.jpg]
 
 #### 
-![https://github.com/mlech413/bamazon/blob/master/images/7.jpg](/images/Img7.jpg)
-[https://github.com/mlech413/bamazon/blob/master/images/7.jpg]
+(/images/img7.jpg)
+[https://github.com/mlech413/bamazon/blob/master/images/img7.jpg]
