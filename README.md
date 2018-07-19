@@ -2,7 +2,7 @@
 
 ## Customer Interface
 
-#### This application uses console line commands to replicate a storefront. Prompts are issued via npm inquirer and cli-table packages, and a MySQL database stores the data using the npm mysql package.
+#### This application uses console line commands to replicate a storefront. Prompts are issued via the npm inquirer package, products displayed with the cli-table package, and a MySQL database stores the data using the npm mysql package.
 
 ## Instructions
 
