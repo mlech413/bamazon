@@ -41,7 +41,7 @@ function start() {
 
 };
 
-//products() dsplays the full product list and then asks user to pick a product for purchase
+//products() displays the full product list and then asks user to pick a product for purchase
 function products(res){
 
     console.log(" ");
