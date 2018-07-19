@@ -6,7 +6,7 @@
 
 ## Instructions
 
-#### This application runs MySQL using the <a href='https://www.mamp.info/en/downloads/'>MAMP</a> local server environment installed on the user's computer. The application is initiated with the command 'node bamazonCustomer.js'.
+#### This application runs MySQL using the [MAMP](https://www.mamp.info/en/downloads/) local server environment installed on the user's computer. The application is initiated with the command 'node bamazonCustomer.js'.
 
 #### The bamazon application displays an inventory of products. Each item displays an item ID, description, department, and price. The user is prompted to enter the item which they would like to purchase, followed by a second prompt asking the quantity. If the current product quantity is in stock, the application makes the purchase, calculating the users total cost and updating the number of available items remaining in stock. If the user is requesting a quantity that exceeds the current product quantity in stock, the user is alerted and asked to adjust their quantity.
 
@@ -21,7 +21,7 @@
 #### Item 5 (Bounce Dryer Sheets) has been purchased. The user is informed of the quantity purchased (5), as well as the remaining count still in stock. In this case, there were only 5 available originally and all 5 were purchased, so there are now 0 items remaining. The total cost of $62.45 is displayed ($12.49 price * 5 quantity):
 ![Img3.jpg](/images/Img3.jpg)
 
-#### Items that are out of stock will no longer appear in the initial product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are **not** displayed when the application is run again:
+#### Items that are out of stock will no longer appear in the initial product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are *not* displayed when the application is run again:
 ![Img4.jpg](/images/Img4.jpg)
 
 #### The application will only accept numbers of actual products. It will reject:
