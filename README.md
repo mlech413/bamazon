@@ -12,7 +12,7 @@
 
 #### After entering the console command 'node bamazonCustomer.js', the user is shown a list of available items, and asked to pick the ID of an item to purchase. In this example, there are 10 items available. The user is entering item '5' for Bounce Dryer Sheets:
 
-(/images/img1.jpg)
+!(/images/img1.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/img1.jpg]
 
 
