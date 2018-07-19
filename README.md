@@ -6,7 +6,7 @@
 
 ## Instructions
 
-#### This application runs MySQL using the [MAMP](https://www.mamp.info/en/downloads/) local server environment installed on the user's computer. The application is initiated with the command 'node bamazonCustomer.js' in the console.
+#### This application runs MySQL using the [MAMP](https://www.mamp.info/en/downloads/) local server environment installed on the user's computer. The application is initiated with the command `node bamazonCustomer.js` in the console.
 
 #### The bamazon application displays an inventory of products. Each item displays an item ID, description, department, and price. The user is prompted to enter the item which they would like to purchase, followed by a second prompt asking the quantity. If the current product quantity is in stock, the application makes the purchase, calculating the users total cost and updating the number of available items remaining in stock. If the user is requesting a quantity that exceeds the current product quantity in stock, the user is alerted and asked to adjust their quantity.
 
