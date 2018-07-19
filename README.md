@@ -20,15 +20,18 @@
 ![GitHub Logo](/images/Img2.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/2.jpg]
 
-### The purchase has been made, as item 5 (Bounce Dryer Sheets) has been purchased. the user is imformed of the quantity purchased (5), and the remaining stock. In this case, there were only 5 available originally and all 5 were purchased, so there are now 0 items remaining. The total cost of $62.45 is displayed ($12.49 price * 5 quantity):
+### The purchase has been made, as item 5 (Bounce Dryer Sheets) has been purchased. The user is informed of how many they purchased (5), as well as the remaining count still in stock. In this case, there were only 5 available originally and all 5 were purchased, so there are now 0 items remaining. The total cost of $62.45 is displayed ($12.49 price * 5 quantity):
 ![GitHub Logo](/images/Img3.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/3.jpg]
 
-### 
+### Items that are out of stock will no longer appear in the inital product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are not be displayed when the application is run again:
 ![GitHub Logo](/images/Img4.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/4.jpg]
 
-### 
+### The application will only accept numbers of actual products. It will reject:
+* any numbers outside of the item ID range,
+* pressing Enter with no value, and
+* all non-numeric characters:
 ![GitHub Logo](/images/Img5.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/5.jpg]
 
