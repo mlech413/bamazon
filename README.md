@@ -28,10 +28,10 @@
 ![GitHub Logo](/images/Img4.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/4.jpg]
 
-### The application will only accept numbers of actual products. It will reject:
-* any numbers outside of the item ID range,
-* pressing Enter with no value, and
-* all non-numeric characters:
+#### The application will only accept numbers of actual products. It will reject:
+####* any numbers outside of the item ID range,
+####* pressing Enter with no value, and
+####* all non-numeric characters:
 ![GitHub Logo](/images/Img5.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/5.jpg]
 
