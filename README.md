@@ -31,15 +31,15 @@
 #### The application will only accept numbers of actual products. It will reject:
 * any numbers outside of the item ID range,
 * pressing Enter with no value, and
-* all non-numeric characters:
- 
-![GitHub Logo](/images/Img5.jpg)
+* all non-numeric characters.
+#### In all of these cases, a message is displayed and the product list is displayed again:
+(/images/Img5.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/5.jpg]
 
 #### 
-![GitHub Logo](/images/Img6.jpg)
+!(/images/Img6.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/6.jpg]
 
 #### 
-![GitHub Logo](/images/Img7.jpg)
+![https://github.com/mlech413/bamazon/blob/master/images/7.jpg](/images/Img7.jpg)
 [https://github.com/mlech413/bamazon/blob/master/images/7.jpg]
