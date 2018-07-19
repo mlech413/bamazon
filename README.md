@@ -19,7 +19,7 @@
 #### Next, the user is prompted a second time to enter the quantity of the item that they would like to purchase. Here, the user is entering a quantity of 5:
 ![Img2.jpg](/images/Img2.jpg)
 
-#### AFter entering a quantity that is in stock, the item is purchased. Following this example, item #5 (Bounce Dryer Sheets) has been purchased. The user is informed of the quantity purchased (5), as well as the remaining count still in stock. In this case, there were only 5 available originally and all 5 were purchased, so there are now 0 items remaining. The total cost of $62.45 is also displayed ($12.49 price * 5 quantity):
+#### After entering a quantity that is in stock, the item is purchased. Following this example, item #5 (Bounce Dryer Sheets) has been purchased. The user is informed of the quantity purchased (5), as well as the remaining count still in stock. In this case, there were only 5 available originally and all 5 were purchased, so there are now 0 items remaining. The total cost of $62.45 is also displayed ($12.49 price * 5 quantity):
 ![Img3.jpg](/images/Img3.jpg)
 
 #### Items that are out of stock will no longer appear in the initial product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are *NOT* displayed when the application is run again:
