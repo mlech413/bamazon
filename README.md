@@ -34,5 +34,5 @@
 #### When the user requests a quantity that exceeds the amount that the store has in stock, they are told of the insufficient quantity and the number available in stock:
 ![Img6.jpg](/images/Img6.jpg)
 
-#### A user-entered quantity of 0 indicates the user does not which to purchase that item, and the product display will refresh and start again with the first prompt:
+#### A user-entered quantity of 0 indicates the user does not which to purchase that item, so the product display will refresh and start again with the first prompt:
 ![Img7.jpg](/images/Img7.jpg)
