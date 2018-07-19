@@ -24,14 +24,11 @@ connection.connect(function(err) {
 });
 
 function start() {
-    var query = "SELECT * FROM products ORDER BY department_name, product_name;";
+    var query = "SELECT * FROM products WHERE stock_quantity > 0 ORDER BY department_name, product_name;";
     connection.query(query, function(err, res) {
         for (var i = 0; i < res.length; i++){
-            //Loop through the query results, but ONLY DISPLAY PRODUCTS THAT ARE IN STOCK
-            if (res[i].stock_quantity > 0){
-                //Populate and format the product list using npm cli-table
-                table.push([res[i].item_id, res[i].product_name, res[i].department_name, "$" + res[i].price]);
-            }
+            //Loop through the query results, display all of the the products that are in stock
+            table.push([res[i].item_id, res[i].product_name, res[i].department_name, "$" + res[i].price]);
         };
         products(res);
 
