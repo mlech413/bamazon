@@ -12,7 +12,7 @@
 
 #### After entering the console command 'node bamazonCustomer.js', the user is shown a list of available items, and asked to pick the ID of an item to purchase. In this example, there are 10 items available. The user is entering item '5' for Bounce Dryer Sheets:
 
-![GitHub Logo](./images/Img1.jpg)
+![https://github.com/mlech413/bamazon/blob/master/images/Img1.jpg](./images/Img1.jpg)
 
 
 #### The user is them prompted a second time, to enter the quantity of that item that they which to purchase. Here the user is entering a quantity of 5:
@@ -21,7 +21,7 @@
 #### Item 5 (Bounce Dryer Sheets) has been purchased. The user is informed of the quantity purchased (5), as well as the remaining count still in stock. In this case, there were only 5 available originally and all 5 were purchased, so there are now 0 items remaining. The total cost of $62.45 is displayed ($12.49 price * 5 quantity):
 ![GitHub Logo](/images/Img3.jpg)
 
-#### Items that are out of stock will no longer appear in the inital product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are not be displayed when the application is run again:
+#### Items that are out of stock will no longer appear in the initial product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are **not** displayed when the application is run again:
 ![GitHub Logo](/images/Img4.jpg)
 
 #### The application will only accept numbers of actual products. It will reject:
