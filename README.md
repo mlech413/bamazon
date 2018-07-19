@@ -21,7 +21,7 @@
 #### Item 5 (Bounce Dryer Sheets) has been purchased. The user is informed of the quantity purchased (5), as well as the remaining count still in stock. In this case, there were only 5 available originally and all 5 were purchased, so there are now 0 items remaining. The total cost of $62.45 is displayed ($12.49 price * 5 quantity):
 ![Img3.jpg](/images/Img3.jpg)
 
-#### Items that are out of stock will no longer appear in the initial product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are *not* displayed when the application is run again:
+#### Items that are out of stock will no longer appear in the initial product display. In our example, item 5 (Bounce Dryer Sheets) are now sold out, so they are *NOT* displayed when the application is run again:
 ![Img4.jpg](/images/Img4.jpg)
 
 #### The application will only accept numbers of actual products. It will reject:
@@ -34,5 +34,5 @@
 #### When the user requests a quantity that exceeds the amount that the store has in stock, they are told of the insufficient quantity and the number available in stock:
 ![Img6.jpg](/images/Img6.jpg)
 
-#### A quantity of 0 indicates the user does not which to purchase that item, and the product display will refresh and start again with the first prompt:
+#### A user-entered quantity of 0 indicates the user does not which to purchase that item, and the product display will refresh and start again with the first prompt:
 ![Img7.jpg](/images/Img7.jpg)
