@@ -138,11 +138,11 @@ function quantity(res){
     connection.query(query, function(err, res) {
         if (err) throw err;
         //display messages for the purchase
-        console.log("\nCongratulations!".yellow)
+        console.log("\nCongratulations!".yellow);
         //Show user how many they purchased, and how many remain in stock
         console.log("You purchased " + selectedPurchaseQty + " of '" + selectedProdName + "'. " + (selectedStockQty - selectedPurchaseQty) + " remaining in stock.");
         //Show the user their total cost for the purchase, and exit the transaction
-        console.log(("Your total cost is $" + selectedPurchaseQty + selectedPrice).yellow)
+        console.log("Your total cost is $" + (selectedPurchaseQty * selectedPrice));
         connection.end();
     });
 
